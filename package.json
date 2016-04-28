@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlight",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React component for syntax highlighting",
   "main": "HightLight.js",
   "scripts": {

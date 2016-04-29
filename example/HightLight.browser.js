@@ -1,6 +1,11 @@
 (function (window) {
 
   var HighLight = React.createClass({
+    propTypes: {
+      lang: React.PropTypes.string.isRequired,
+      value: React.PropTypes.string.isRequired
+    },
+
     componentDidMount: function () {
       // this will only be called once after first time render
       this.updateCodeBlockDOM();
@@ -42,18 +47,11 @@
       try {
         ele.innerHTML = hljs.highlight(this.props.lang, this.props.value, true).value;
       } catch (e) {
-        // Unknown language: remove highlight
-        console.warn(e.message);
-        ele.innerHTML = this.props.value;
+        console.warn(e);
+        ele.innerHTML = this.props.value; // remove syntax highlight
       }
     }
   });
-
-  // class static member
-  HighLight.propTypes = {
-    lang: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired
-  };
 
   // window.HighLight
   if (typeof window === 'object' && typeof window.HighLight === 'undefined') {

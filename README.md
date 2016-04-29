@@ -6,9 +6,9 @@
 
 > React component for syntax highlighting
 
-## Demo
+## JS Bin Demo
 
-http://jsbin.com/bibaqu
+http://jsbin.com/bibaqu/edit?js,output
 
 ## Installation
 

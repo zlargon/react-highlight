@@ -1,9 +1,13 @@
 var App = React.createClass({
-  getInitialState: function () {
+  getDefaultProps: function () {
     return {
       lang: 'javascript',
       value: 'var hello = "world";'
-    };
+    }
+  },
+
+  getInitialState: function () {
+    return this.props;
   },
 
   render: function () {
@@ -18,7 +22,7 @@ var App = React.createClass({
           />
         </div>
 
-        <article>
+        <div>
           <HighLight
             lang={this.state.lang}
             value={this.state.value}
@@ -29,11 +33,11 @@ var App = React.createClass({
               className='hljs textarea'
               contentEditable='true'
               spellCheck='false'
-              onInput={e => this.setState({ value: event.target.outerText })}>
-              {this.state.value}
+              onInput={e => this.setState({ value: e.target.innerText })}>
+              {this.props.value /* only init once time */}
             </code>
           </pre>
-        </article>
+        </div>
       </div>
     );
   }

@@ -1,3 +1,7 @@
+## 0.0.4 (Dec 11, 2016)
+
+- fix bug: it does not work with `webpack`
+
 ## 0.0.3 (Dec 11, 2016)
 
 - move packages `dependencies` to `peerDependencies`

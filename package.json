@@ -24,9 +24,9 @@
     "url": "https://github.com/zlargon/react-highlight/issues"
   },
   "homepage": "https://github.com/zlargon/react-highlight#readme",
-  "dependencies": {
-    "highlight.js": "^9.3.0",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+  "peerDependencies": {
+    "highlight.js": "9.x",
+    "react": "15.x",
+    "react-dom": "15.x"
   }
 }

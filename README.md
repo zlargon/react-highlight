@@ -13,7 +13,8 @@ http://jsbin.com/bibaqu/edit?js,output
 ## Installation
 
 ```bash
-npm install react-syntax-highlight --save
+$ npm install --save react react-dom highlight.js 	# peer dependencies
+$ npm install --save react-syntax-highlight
 ```
 
 ## Usage

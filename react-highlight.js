@@ -1,4 +1,4 @@
-(function (window) {
+(function (usingNode) {
 
   function getHighLight(React, ReactDOM, hljs) {
     return React.createClass({
@@ -55,7 +55,7 @@
     });
   }
 
-  if (typeof window === 'undefined') {
+  if (usingNode) {
     // Node: export as module
     module.exports = getHighLight(
       require('react'),
@@ -67,4 +67,4 @@
     window.HighLight = window.HighLight || getHighLight(React, ReactDOM, hljs);
   }
 
-})(this);
+})(typeof exports !== 'undefined');

@@ -10,6 +10,10 @@
 
 http://jsbin.com/bibaqu/edit?js,output
 
+## Change Log
+
+Please see [CHANGELOG](https://github.com/zlargon/react-highlight/blob/master/CHANGELOG.md).
+
 ## Installation
 
 ```bash

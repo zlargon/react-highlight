@@ -17,7 +17,7 @@ Please see [CHANGELOG](https://github.com/zlargon/react-highlight/blob/master/CH
 ## Installation
 
 ```bash
-$ npm install --save react react-dom highlight.js 	# peer dependencies
+$ npm install --save react react-dom highlight.js   # peer dependencies
 $ npm install --save react-syntax-highlight
 ```
 

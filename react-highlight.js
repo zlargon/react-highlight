@@ -1,6 +1,6 @@
-(function (usingNode) {
+(function () {
 
-  function getHighLight(React, ReactDOM, hljs) {
+  function loadModule(React, ReactDOM, hljs) {
     return React.createClass({
       propTypes: {
         lang: React.PropTypes.string.isRequired,
@@ -55,16 +55,20 @@
     });
   }
 
-  if (usingNode) {
+  if (typeof require === 'function' &&
+      typeof module  === 'object' &&
+      typeof exports === 'object' &&
+      module.exports === exports) {
+
     // Node: export as module
-    module.exports = getHighLight(
+    module.exports = loadModule(
       require('react'),
       require('react-dom'),
       require('highlight.js')
     );
   } else {
     // Browser: export as global variable
-    window.HighLight = window.HighLight || getHighLight(React, ReactDOM, hljs);
+    window.HighLight = window.HighLight || loadModule(React, ReactDOM, hljs);
   }
 
-})(typeof exports !== 'undefined');
+})();

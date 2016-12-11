@@ -2,7 +2,7 @@
   "name": "react-syntax-highlight",
   "version": "0.0.2",
   "description": "React component for syntax highlighting",
-  "main": "HightLight.js",
+  "main": "react-highlight.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,3 +1,7 @@
+## 0.0.5 (Dec 12, 2016)
+
+- move packages `highlight.js` back to `dependencies`
+
 ## 0.0.4 (Dec 11, 2016)
 
 - fix bug: it does not work with `webpack`

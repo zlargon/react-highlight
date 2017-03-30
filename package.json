@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/zlargon/react-highlight#readme",
   "dependencies": {
-    "highlight.js": "^9.8.0"
+    "highlight.js": "^9.10.0"
   },
   "peerDependencies": {
     "react": "15.x",

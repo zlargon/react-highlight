@@ -8,7 +8,9 @@
     module.exports = factory(
       require('react'),
       require('react-dom'),
-      require('highlight.js')
+      require('prop-types'),
+      require('highlight.js'),
+      require('create-react-class')
     );
   } else {
     // Browser: export as global variable
@@ -16,13 +18,8 @@
   }
 
 })(function (React, ReactDOM, hljs) {
-  return React.createClass({
-    propTypes: {
-      lang: React.PropTypes.string.isRequired,
-      value: React.PropTypes.string.isRequired
-    },
-
-    componentDidMount: function () {
+  var HighLightClass = createReactClass({
+        componentDidMount: function () {
       // this will only be called once after first time render
       this.updateCodeBlockDOM();
     },
@@ -68,4 +65,11 @@
       }
     }
   });
+
+  HighLightClass.propTypes = {
+    lang: React.PropTypes.string.isRequired,
+    value: React.PropTypes.string.isRequired
+  };
+
+  return HighLightClass;
 });

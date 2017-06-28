@@ -17,9 +17,14 @@
     window.HighLight = window.HighLight || factory(React, ReactDOM, hljs);
   }
 
-})(function (React, ReactDOM, hljs) {
-  var HighLightClass = createReactClass({
-        componentDidMount: function () {
+})(function (React, ReactDOM, PropTypes, hljs, createReactClass) {
+  return createReactClass({
+    propTypes: {
+      lang: React.PropTypes.string.isRequired,
+      value: React.PropTypes.string.isRequired
+    },
+
+    componentDidMount: function () {
       // this will only be called once after first time render
       this.updateCodeBlockDOM();
     },
@@ -66,10 +71,5 @@
     }
   });
 
-  HighLightClass.propTypes = {
-    lang: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired
-  };
 
-  return HighLightClass;
 });

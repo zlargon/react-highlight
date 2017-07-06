@@ -8,14 +8,15 @@
     module.exports = factory(
       require('react'),
       require('react-dom'),
+      require('prop-types'),
       require('highlight.js')
     );
   } else {
     // Browser: export as global variable
-    window.HighLight = window.HighLight || factory(React, ReactDOM, hljs);
+    window.HighLight = window.HighLight || factory(React, ReactDOM, PropTypes, hljs);
   }
 
-})(function (React, ReactDOM, hljs) {
+})(function (React, ReactDOM, PropTypes, hljs) {
 
   class HighLight extends React.Component {
     constructor(props) {
@@ -73,8 +74,8 @@
   };
 
   HighLight.propTypes = {
-    lang: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired
+    lang: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired
   };
 
   return HighLight;

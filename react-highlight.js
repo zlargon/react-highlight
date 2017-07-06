@@ -16,23 +16,27 @@
   }
 
 })(function (React, ReactDOM, hljs) {
-  return React.createClass({
-    propTypes: {
-      lang: React.PropTypes.string.isRequired,
-      value: React.PropTypes.string.isRequired
-    },
 
-    componentDidMount: function () {
+  class HighLight extends React.Component {
+    constructor(props) {
+      super(props);
+      this.componentDidMount = this.componentDidMount.bind(this);
+      this.componentDidUpdate = this.componentDidUpdate.bind(this);
+      this.updateCodeBlockDOM = this.updateCodeBlockDOM.bind(this);
+      this.render = this.render.bind(this);
+    }
+
+    componentDidMount () {
       // this will only be called once after first time render
       this.updateCodeBlockDOM();
-    },
+    }
 
-    componentDidUpdate: function () {
+    componentDidUpdate () {
       // whenever component is updated
       this.updateCodeBlockDOM();
-    },
+    }
 
-    render: function () {
+    render () {
       /*
        * <pre inherit_all_the_props_from_parent >
        *  <code ref='code' className={'hljs ' + this.props.lang}>
@@ -41,8 +45,7 @@
        * </pre>
        *
        */
-
-      var props = Object.assign({}, this.props);
+      const props = Object.assign({}, this.props);
       delete props.lang;
       delete props.value;
 
@@ -54,11 +57,11 @@
           })
         )
       );
-    },
+    }
 
-    updateCodeBlockDOM: function () {
+    updateCodeBlockDOM () {
       // update real DOM element after component render
-      var ele = ReactDOM.findDOMNode(this.refs.code);
+      const ele = ReactDOM.findDOMNode(this.refs.code);
 
       try {
         ele.innerHTML = hljs.highlight(this.props.lang, this.props.value, true).value;
@@ -67,5 +70,12 @@
         ele.innerHTML = this.props.value; // remove syntax highlight
       }
     }
-  });
+  };
+
+  HighLight.propTypes = {
+    lang: React.PropTypes.string.isRequired,
+    value: React.PropTypes.string.isRequired
+  };
+
+  return HighLight;
 });

@@ -1,16 +1,11 @@
-var App = React.createClass({
-  getDefaultProps: function () {
-    return {
-      lang: 'javascript',
-      value: 'var hello = "world";'
-    }
-  },
+class App extends React.Component {
 
-  getInitialState: function () {
-    return this.props;
-  },
+  constructor (props) {
+    super(props);
+    this.state = props;
+  }
 
-  render: function () {
+  render () {
     return (
       <div className="container">
         <h1>Live Editor</h1>
@@ -41,6 +36,11 @@ var App = React.createClass({
       </div>
     );
   }
-});
+}
+
+App.defaultProps = {
+  lang: 'javascript',
+  value:'let hello = "world";'
+};
 
 ReactDOM.render(<App/>, document.getElementById('root'));

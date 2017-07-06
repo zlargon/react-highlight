@@ -1,3 +1,13 @@
+## 15.3.0 (July 07, 2017)
+
+- fix Deprecation Warnings with __React 15.5.0__ and higher. (https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html)
+	- remove `React.createClass` (https://fb.me/react-create-class)
+	- remove React.PropTypes (https://fb.me/prop-types-docs)
+- using ES6 syntax
+- add new dependencies
+	- `prop-types` (https://github.com/facebook/prop-types)
+- This package is compatible with React 15.3.0 and higher. (https://github.com/facebook/prop-types#compatibility)
+
 ## 0.0.6 (March 30, 2017)
 
 - add yarn.lock file

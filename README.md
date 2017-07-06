@@ -6,10 +6,6 @@
 
 > React component for syntax highlighting
 
-## JS Bin Demo
-
-http://jsbin.com/bibaqu/edit?js,output
-
 ## Change Log
 
 Please see [CHANGELOG](https://github.com/zlargon/react-highlight/blob/master/CHANGELOG.md).
@@ -20,6 +16,12 @@ Please see [CHANGELOG](https://github.com/zlargon/react-highlight/blob/master/CH
 $ npm install --save react react-dom          # peer dependencies
 $ npm install --save react-syntax-highlight
 ```
+
+## Compatibility: React 15.3.0+
+
+This package is compatible with __React 15.3.0__ and higher. (https://github.com/facebook/prop-types#compatibility)
+
+`npm install --save react@^15.3.0 react-dom@^15.3.0`
 
 ## Usage
 
@@ -48,6 +50,11 @@ var Highlight = require('react-syntax-highlight');
 
 <Highlight lang={language} value={content} />
 ```
+
+## Example
+
+- https://github.com/zlargon/react-highlight-example
+- http://jsbin.com/bibaqu/edit?js,output (JS Bin)
 
 ## License
 

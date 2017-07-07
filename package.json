@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlight",
-  "version": "0.0.6",
+  "version": "15.3.0",
   "description": "React component for syntax highlighting",
   "main": "react-highlight.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/zlargon/react-highlight.git"
   },
-  "author": "zlargon <zlargon@icloud.com>",
+  "author": "zlargon <zlargon1988@gmail.com>",
   "keywords": [
     "react",
     "reactjs",

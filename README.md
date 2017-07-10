@@ -46,7 +46,7 @@ see all the highlight theme [here](https://github.com/isagalaev/highlight.js/tre
 ### React Part
 
 ```jsx
-var Highlight = require('react-syntax-highlight');
+const Highlight = require('react-syntax-highlight');
 
 <Highlight lang={language} value={content} />
 ```

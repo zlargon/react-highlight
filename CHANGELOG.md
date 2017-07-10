@@ -1,3 +1,7 @@
+## 15.3.1 (July 10, 2017)
+
+- fix build error with UglifyJs. [issue#2](https://github.com/zlargon/react-highlight/issues/2)
+
 ## 15.3.0 (July 07, 2017)
 
 - fix Deprecation Warnings with __React 15.5.0__ and higher. (https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html)

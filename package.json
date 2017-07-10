@@ -2,9 +2,10 @@
   "name": "react-syntax-highlight",
   "version": "15.3.0",
   "description": "React component for syntax highlighting",
-  "main": "react-highlight.js",
+  "main": "dist/react-highlight.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "babel react-highlight.js -d dist"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,9 @@
   "peerDependencies": {
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
   }
 }
